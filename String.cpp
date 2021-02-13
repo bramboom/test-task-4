@@ -5,7 +5,7 @@ using namespace std;
 
 void String::SetString()
 {
-	cout << endl << "Введите строку:";
+	cout << endl << "Enter the string:";
 
 	cin >> _string;
 
@@ -25,7 +25,7 @@ string String::CheckString(string _string)
 		{
 			if ((_string[index] < '0') || (_string[index] > '9'))
 			{
-				cout << endl << "Неверное значение, строка должна состоять из цифр!!!";
+				cout << endl << "Invalid value, the string must contain only numbers !!!";
 				throw _string;
 			}
 		}
@@ -33,7 +33,7 @@ string String::CheckString(string _string)
 	}
 	catch (string exeption)
 	{
-		cout << endl << "Введите строку:";
+		cout << endl << "Enter the string:";
 
 		cin >> _string;
 
@@ -63,5 +63,5 @@ void String::MaxValue()
 
 	delete[] symbol;
 
-	cout << endl << "Наибольшая цифра в числе: " << maxValue;
+	cout << endl << "The largest digit in the number:" << maxValue;
 }
